@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Index-Page</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Per Item Price</th>
+                <th>Total Qty</th>
+                <th>Total Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for shop in shops %}
+            <tr>
+                <td>{{shop.itemname}}</td>
+                <td>{{shop.peritemprice}}</td>
+                <td>{{shop.totalqty}}</td>
+                <td>{{shop.totalprice}}</td>
+                <td>
+                    <a href="edit/{{shop.id}}"> Edit</a>
+                    <a href="delete/{{shop.id}}"> Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>

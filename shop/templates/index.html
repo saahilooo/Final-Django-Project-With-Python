@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Index-Page</title>
+</head>
+<body>
+
+<form method="POST"  action="/shopAdd">
+
+    {% csrf_token %}
+    <div>
+        <div>
+            <label>Item Name</label>
+            <div>
+                {{form.itemname}}
+            </div>
+        </div>
+        <div>
+            <label>Per Item Price</label>
+            <div>
+                {{form.peritemprice}}
+            </div>
+        </div>
+        <div>
+            <label>Total Qty</label>
+            <div>
+                {{form.totalqty}}
+            </div>
+        </div>
+        <div>
+            <label>Total Price</label>
+            <div>
+                {{form.totalprice}}
+            </div>
+        </div>
+        <button type="submit"> SUBMIT</button>
+    </div>
+
+</form>
+
+</body>
+</html>
